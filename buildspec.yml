@@ -7,14 +7,13 @@ phases:
   pre_build:
     commands:
       - echo Executing Pre Build Phase
-      - mvn clean
   build:
     commands:
       - echo Executing Build Phase
-      - mvn spring-boot:build-image
+      - mvn clean package
   post_build:
     commands:
       - echo Executing Post Build Phase
-#artifacts:
-#  files:
-#    - target/rnralbumart.jar
+artifacts:
+  files:
+    - target/rnralbumart.jar
