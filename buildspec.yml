@@ -11,10 +11,10 @@ phases:
   build:
     commands:
       - echo Executing Build Phase
-      - mvn clean package
+      - mvn spring-boot:build-image
   post_build:
     commands:
       - echo Executing Post Build Phase
-artifacts:
-  files:
-    - target/rnralbumart.jar
+#artifacts:
+#  files:
+#    - target/rnralbumart.jar
