@@ -7,8 +7,8 @@ phases:
   pre_build:
     commands:
       - echo Executing Pre Build Phase
-      - echo java -version
-      - echo mvn -version
+      - java -version
+      - mvn -version
   build:
     commands:
       - echo Executing Build Phase
