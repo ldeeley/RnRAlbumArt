@@ -27,23 +27,23 @@ At the end of this Iteration, should be able to :
 
 Add annotations to User entity POJO
 
-![Auditing annotations](Markdown%20Documentation/Images/auditing%20annotations.png)
+![](Images/auditing%20annotations.png)
 
 Add an AuditorAware implementation. This will be enhanced later when Spring Boot Security is implemented to get the actual logged in User
 
-![Auditor aware class](Markdown%20Documentation/Images/auditor%20aware%20class.png)
+![](Images/auditor%20aware%20class.png)
 
 Enable the Spring Data JPA Auditing. Create a Bean 
 
-![Auditing config](Markdown%20Documentation/Images/Auditing%20config.png)
+![](Images/Auditing%20config.png)
 
 Check database for Audit fields. This will be built out further when Spring Boot Security implemented in later iteration.
 
-![SQL audit](Markdown%20Documentation/Images/sqlaudit.png)
+![](Images/sqlaudit.png)
 
 ### Documentation of REST Endpoints
 
-![](Markdown%20Documentation/Images/spring%20boot.png)  - The Spring Boot app at this stage has WebLayer - RestController with endpoints
+![](Images/spring%20boot.png) - The Spring Boot app at this stage has WebLayer - RestController with endpoints
 
 * GET
 * POST
@@ -62,20 +62,20 @@ Add OpenAPI dependency to POM.xml
 
 Generates documentation
 
-![](Markdown%20Documentation/Images/openapidoc.png)
+![](Images/openapidoc.png)
 
-![](Markdown%20Documentation/Images/swaggerrnr.png)
+![](Images/swaggerrnr.png)
 
 Use the Swagger ui to test REST Endpoints
 
-![](Markdown%20Documentation/Images/git.png) - The GitHub repo is [https://github.com/ldeeley/RnRAlbumArt](https://github.com/ldeeley/RnRAlbumArt)
+![](Images/git.png) - The GitHub repo is [https://github.com/ldeeley/RnRAlbumArt](https://github.com/ldeeley/RnRAlbumArt)
 
 
 ### Logging
 
 Using the Lombok @Slf4j annotation, implement logging in the Service Layer and Controller Layer. Collection of Logs (later iteration)
 
-![Example Logging in Service Layer](Markdown%20Documentation/Images/Logging.png)
+![](Images/Logging.png)
 
 
 ### Testing
