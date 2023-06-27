@@ -3,6 +3,8 @@ package com.example.rnralbumart.Util;
 import com.example.rnralbumart.dto.UserRequestDTO;
 import com.example.rnralbumart.dto.UserResponseDTO;
 import com.example.rnralbumart.model.UserEntity;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class AppUtils {
 
@@ -25,6 +27,13 @@ public class AppUtils {
         return userResponseDTO;
     }
 
-
+    public static String convertObjectToJSON(Object object){
+        try {
+            return new ObjectMapper().writeValueAsString(object);
+        } catch (JsonProcessingException e){
+            e.printStackTrace();
+        }
+        return null;
+    }
 
 }

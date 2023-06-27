@@ -13,6 +13,8 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+
+import static com.example.rnralbumart.TestDataUtil.getUserResponseDTO;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 
 
@@ -54,8 +56,6 @@ public class RnRAlbumArtIntegrationTests {
                 .andExpect(jsonPath("$.status").value("OK"));
     }
 
-
-
     private UserRequestDTO getUserRequest(){
         return UserRequestDTO.builder()
                 .userName("testUsername")
@@ -65,15 +65,6 @@ public class RnRAlbumArtIntegrationTests {
                 .build();
     }
 
-    private UserResponseDTO getUserResponseDTO(Integer userId){
-        return UserResponseDTO.builder()
-                .userId(userId)
-                .userName("testUserName")
-                .firstName("testFirstName")
-                .lastName("testLastName")
-                .password("testPassword")
-                .build();
 
-    }
 
 }

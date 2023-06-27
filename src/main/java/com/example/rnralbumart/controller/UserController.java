@@ -1,15 +1,20 @@
 package com.example.rnralbumart.controller;
 
+import com.example.rnralbumart.Util.AppUtils;
 import com.example.rnralbumart.dto.UserRequestDTO;
 import com.example.rnralbumart.dto.UserResponseDTO;
 import com.example.rnralbumart.dto.UserServiceResponse;
 import com.example.rnralbumart.service.UserService;
+import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Slf4j
 @RestController
 @RequestMapping("/rnr/user")
 public class UserController {
@@ -20,10 +25,12 @@ public class UserController {
 
     @PostMapping
     public UserServiceResponse<UserResponseDTO> addUser(@RequestBody UserRequestDTO userRequestDTO) {
+        log.info("UserController::addUser method execution start : Request payload : {}", AppUtils.convertObjectToJSON(userRequestDTO));
         UserServiceResponse<UserResponseDTO> userServiceResponse = new UserServiceResponse<>();
         UserResponseDTO userResponseDTO = userService.createUser(userRequestDTO);
         userServiceResponse.setStatus(HttpStatus.CREATED);
         userServiceResponse.setResponse(userResponseDTO);
+        log.info("UserController::addUser method execution end ServiceResponse payload : {}", AppUtils.convertObjectToJSON(userServiceResponse));
         return userServiceResponse;
     }
 
@@ -34,7 +41,6 @@ public class UserController {
         userServiceResponse.setStatus(HttpStatus.OK);
         userServiceResponse.setResponse(userResponseDTO);
         return userServiceResponse;
-
     }
 
     @GetMapping

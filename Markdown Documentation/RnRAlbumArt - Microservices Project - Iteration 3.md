@@ -80,5 +80,7 @@ Using the Lombok @Slf4j annotation, implement logging in the Service Layer and C
 
 ### Testing
 
+Unit Tests
 
+![](Images/unitTest.png)
 

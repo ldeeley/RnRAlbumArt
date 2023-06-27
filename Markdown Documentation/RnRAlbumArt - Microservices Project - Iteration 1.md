@@ -36,13 +36,15 @@ To establish a working environment for the build, do the following
 
 ## Getting started with CodePipeline
 
-##### Source Stage
+### Source Stage
 
+Build a Codepipeline in AWS. Configure the Source Stage of the pipeline so that it is hooked into the GitHub repository. In this way, every time a code change is pushed to the GitHub repository, the Codepipeline recognises this and triggers a new build/deploy.
 
+### Build Stage
 
-##### Build Stage
+buildspec.yml - instructions on how to proceed with the build inside the pipeline.
+It uses Maven to compile the code, build a Docker image and then Push the resulting Docker image to the AWS ECR prior to deployment
 
-buildspec.yml - instructions on how to proceed with the build
 
 ```yaml
 version: 0.2
@@ -92,3 +94,6 @@ COPY target/*.jar app.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","/app.jar"]
 ```
+
+### Deploy Stage
+
