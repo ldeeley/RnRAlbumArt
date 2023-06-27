@@ -22,9 +22,9 @@ At the end of this Iteration, should be able to :
 * access the application, running in the cloud, to perform CRUD operations for User records via POSTMAN
 * Execute unit & integration tests as part of the build stage
 
-![Iteration 2 - End State](file:///E:/rnr-project/Iteration%202%20end%20state.png)
+![](Images/Iteration%202%20end%20state.png)
 
-![](file:///E:/rnr-project/spring%20boot.png)  - The Spring Boot app at this stage has
+![](Images/spring%20boot.png)  - The Spring Boot app at this stage has
 * WebLayer - RestController
 * Service Layer
 * Repository Layer
@@ -32,7 +32,7 @@ At the end of this Iteration, should be able to :
 
 
 
-![](file:///E:/rnr-project/git.png) - The GitHub repo is [https://github.com/ldeeley/RnRAlbumArt](https://github.com/ldeeley/RnRAlbumArt)
+![](Images/git.png) - The GitHub repo is [https://github.com/ldeeley/RnRAlbumArt](https://github.com/ldeeley/RnRAlbumArt)
 
 
 ## Docker

@@ -27,11 +27,11 @@ It establishes one source of code, change control and a pipeline to the cloud.
 
 To establish a working environment for the build, do the following
 
-![](file:///E:/rnr-project/pipeline%20flow.png)
+![](Images/pipeline%20flow.png)
 
-![](file:///E:/rnr-project/spring%20boot.png)  - The Spring Boot app at this stage is nothing but a simple Spring-Web, RestController, single endpoint "Rock n Roll" message
+![](Images/spring%20boot.png) - The Spring Boot app at this stage is nothing but a simple Spring-Web, RestController, single endpoint "Rock n Roll" message
 
-![](file:///E:/rnr-project/git.png) - The GitHub repo is [https://github.com/ldeeley/RnRAlbumArt](https://github.com/ldeeley/RnRAlbumArt)
+![](Images/git.png) - The GitHub repo is [https://github.com/ldeeley/RnRAlbumArt](https://github.com/ldeeley/RnRAlbumArt)
 
 
 ## Getting started with CodePipeline
